@@ -3,7 +3,6 @@ import React from 'react'
 class Pet extends React.Component {
   render() {
     const { name, type, age, weight, gender, isAdopted,  id } = this.props.pet 
-    console.log(this.props)
 
     return (
       <div className="card">

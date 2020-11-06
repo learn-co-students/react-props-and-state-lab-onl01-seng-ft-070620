@@ -33,8 +33,10 @@ export default class App extends React.Component {
   }
 
   adoptPet = identifier => {
-    let pet = this.state.pets.find(p => p.id === identifier)
-    pet.isAdopted = true
+    let updatedPets = this.state.pets.map(p => {
+      return p.id === identifier ? {...p, isAdopted: true} : p
+    })
+    this.setState({ pets: updatedPets })
   }
 
   render() {

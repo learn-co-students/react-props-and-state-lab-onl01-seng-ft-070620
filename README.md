@@ -1,6 +1,6 @@
 # React Props and State Lab
 
-## Overview
+## Overview 
 
 You'll build a small React application where you'll update state in response to
 a fetch payload and pass props among components to handle updates.

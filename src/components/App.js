@@ -24,17 +24,15 @@ export default class App extends React.Component {
     if (this.state.filters.type === 'all') {
       let response = await fetch("/api/pets")
       let jsObj = await response.json()
-      this.state.pets = jsObj
+      this.setState({ pets: jsObj })
     } else {
       let response = await fetch(`/api/pets?type=${this.state.filters.type}`)
       let jsObj = await response.json()
-      this.state.pets = jsObj
+      this.setState({ pets: jsObj })
     }
   }
 
   adoptPet = identifier => {
-    // using the id, find matching pet element in state.pets array
-    // and set the isAdopted property to true
     let pet = this.state.pets.find(p => p.id === identifier)
     pet.isAdopted = true
   }

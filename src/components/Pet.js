@@ -1,10 +1,6 @@
 import React from "react";
 
 class Pet extends React.Component {
-  // handleAdoptPet = (event) => {
-  //   this.props.onAdoptPet(this.props.pet.id);
-  // };
-
   render() {
     const { pet } = this.props;
     const { name, type, gender, age, weight } = pet;
